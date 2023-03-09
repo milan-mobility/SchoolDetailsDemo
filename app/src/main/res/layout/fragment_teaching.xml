@@ -1,0 +1,109 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.ui.schooldetailsactivity.teachingFragment.TeachingFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/teacher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/orange_dark"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:text="@string/total_teachers"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTeacher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/teacher"
+            android:text="@string/show_total_teacher"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/standard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/standard"
+            android:textColor="@color/orange_dark"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTeacher"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtStandard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_standard"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/standard"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/subject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/subject"
+            android:textColor="@color/orange_dark"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtStandard"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtsubject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_subject"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subject"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/courses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/courses"
+            android:textColor="@color/orange_dark"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtsubject"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtCourses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_courses"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/courses"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

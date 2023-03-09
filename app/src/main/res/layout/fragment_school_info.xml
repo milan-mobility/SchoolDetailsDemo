@@ -1,0 +1,108 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.ui.schooldetailsactivity.schoolDetailFragment.SchoolInfoFragment"
+       >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/orange_dark"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:text="@string/email"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            android:text="@string/show_email"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_number"
+            android:textColor="@color/orange_dark"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtEmail"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_number"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textColor="@color/orange_dark"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtContact"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_address"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/website"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/website"
+            android:textColor="@color/orange_dark"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtAddress"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtWebsite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_website"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/website"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

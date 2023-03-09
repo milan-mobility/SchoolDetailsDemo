@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/Experience"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:textColor="@color/orange" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/experience"
+            android:text="@string/Experience"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            android:layout_marginStart="@dimen/dimens_20dp"
+             />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/schoolName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtExperience"
+            android:text="SchoolName"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            android:textColor="@color/orange" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtSchoolName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/schoolName"
+            android:text="@string/school_name"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            android:layout_marginStart="@dimen/dimens_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dimens_20dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="registerViewModel"
+            type="com.example.ui.signUp.viewModel.CheckEmailViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue_dark"
+        tools:context="com.example.ui.signUp.activity.SignUpActivity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icBack"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/welComeTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_10dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/welcome_to"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimens_24sp"
+            app:layout_constraintBottom_toBottomOf="@id/icBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icBack"
+            app:layout_constraintTop_toTopOf="@id/icBack" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/kodrisAfrica"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/kodris_africa"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimens_24sp"
+            app:layout_constraintStart_toStartOf="@id/welComeTo"
+            app:layout_constraintTop_toBottomOf="@id/welComeTo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/simpleDummyText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/dimens_12sp"
+            app:layout_constraintStart_toStartOf="@id/kodrisAfrica"
+            app:layout_constraintTop_toBottomOf="@id/kodrisAfrica" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/printing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_5dp"
+            android:text="@string/printing_and_typesetting_industry"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/dimens_12sp"
+            app:layout_constraintStart_toStartOf="@id/simpleDummyText"
+            app:layout_constraintTop_toBottomOf="@id/simpleDummyText" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conInputLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="@dimen/dimens_10dp"
+            android:background="@drawable/tab_bg"
+            android:backgroundTint="@color/login_bg"
+            app:helperTextEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/printing">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                app:boxStrokeColor="@color/gray"
+                app:hintTextColor="@color/gray"
+                app:helperTextEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_10dp"
+                    android:layout_marginEnd="@dimen/dimens_10dp"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="@dimen/dimens_10dp"
+                    android:hint="@string/email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:text="@={registerViewModel.email}"
+                    android:textColorHint="@color/gray" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:hint="@string/password"
+                android:textColorHint="@color/gray"
+                app:boxStrokeColor="@color/gray"
+                app:helperTextEnabled="true"
+                app:hintTextColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutEmail"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_10dp"
+                    android:layout_marginEnd="@dimen/dimens_10dp"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="@dimen/dimens_10dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:text="@={registerViewModel.password}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutConformPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:hint="@string/conform_password"
+                android:textColorHint="@color/gray"
+                app:boxStrokeColor="@color/gray"
+                app:helperTextEnabled="true"
+                app:hintTextColor="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutPassword"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtConformPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimens_10dp"
+                    android:layout_marginEnd="@dimen/dimens_10dp"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="@dimen/dimens_10dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:text="@={registerViewModel.conformPassword}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutConformPassword" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/acceptAllThe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/i_hereby_accept_all_the"
+                app:layout_constraintBottom_toBottomOf="@id/checkBox"
+                app:layout_constraintStart_toEndOf="@id/checkBox"
+                app:layout_constraintTop_toTopOf="@id/checkBox" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_5dp"
+                android:text="@string/terms_and_condition"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@id/acceptAllThe"
+                app:layout_constraintTop_toTopOf="@id/acceptAllThe" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:backgroundTint="@color/orange"
+                android:drawableEnd="@drawable/baseline_arrow_forward_24"
+                android:gravity="center"
+                android:text="@string/signup"
+                android:textAllCaps="false"
+                android:stateListAnimator="@null"
+                android:padding="@dimen/dimens_15dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/checkBox" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cube"
+            app:layout_constraintBottom_toTopOf="@+id/conInputLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/conInputLogin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/userExisting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_an_existing_user"
+            android:textColor="@color/gray"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/login"
+            android:layout_marginBottom="@dimen/dimens_20dp"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conInputLogin" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_5dp"
+            android:layout_marginBottom="@dimen/dimens_10dp"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/userExisting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userExisting"
+            app:layout_constraintTop_toTopOf="@id/userExisting"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>
